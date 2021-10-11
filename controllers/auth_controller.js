@@ -1,6 +1,5 @@
 const bcryptjs = require('bcryptjs');
 
-
 const Usuario = require('../models/usuario');
 const { generarJWT } = require("../helpers/generarJWT");
 
@@ -53,7 +52,7 @@ const login = async( req, res ) => {
 
 }
 
-
+//TODO:
 const logout = async (req, res ) => {
 
 }
