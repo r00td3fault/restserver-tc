@@ -1,0 +1,32 @@
+{
+  "name": "restserver",
+  "version": "1.0.0",
+  "description": "\"Rest server prueba tecnica\"",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nodemon app.js",
+    "start": "node app.js",
+    "test": "jest --verbose",
+    "test:watch": "npm run test -- --watchAll"
+  },
+  "author": "Rodrigo hurtado",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.22.0",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-validator": "^6.12.2",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.0.10",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "jest": "^27.2.5",
+    "supertest": "^6.1.6"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  }
+}
