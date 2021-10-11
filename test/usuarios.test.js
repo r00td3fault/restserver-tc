@@ -1,13 +1,29 @@
 const supertest = require("supertest");
 const { dbDisconnection } = require("../database/config");
-const {  Usuario } = require("../models/usuario");
-const { Server } = require("../models/server");
-const { userInitial, getUsuarios, token } = require("./helpers");
+const {  Usuario , Server  } = require("../models");
+const { userInitial,getUsuarios, token } = require("./helpers");
+
 
 
 const server = new Server();
 
 const api = supertest(server.server);
+
+
+
+const getUsuarios = async() => {
+
+    try {
+        const response = await api.get('/api/usuarios');
+        return response;
+        
+    } catch (error) {
+        console.log(error);
+    }
+
+}
+
+
 
 beforeEach( async() => {
     
@@ -20,10 +36,6 @@ beforeEach( async() => {
         await userObj.save();
     }
 
-    // const user1 = new Usuario(userInitial[0]);
-    // await user1.save();
-    // const user2 = new Usuario(userInitial[1]);
-    // await user2.save();
 
 });
 

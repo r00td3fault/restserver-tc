@@ -8,6 +8,8 @@ const server = new Server();
 
 const api = supertest(server.server);
 
+
+//recuerda setear un token valido
 const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2MTY0NjZmYzRiMWZiZGYxNGY2ZGUyZDQiLCJpYXQiOjE2MzM5NzAyNjUsImV4cCI6MTYzMzk5OTA2NX0.qdHumGZZhS_t01DjHf5qEORr7OkhdBy7V9cpX3PSIb0';
 
 const userInitial = [

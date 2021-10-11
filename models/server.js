@@ -11,6 +11,7 @@ class Server {
         //error en prueba se pone directamente
         this.port = 8080;
         // this.port = process.env.PORT;
+        this.server = require('http').createServer( this.app );
 
         this.paths = {
             auth:       '/api/auth',
@@ -60,7 +61,7 @@ class Server {
     }
 
     listen() {
-        this.app.listen( this.port, () => {
+        this.server.listen( this.port, () => {
             console.log(`Example app listening at http://localhost:${this.port}`);
         });
     }
