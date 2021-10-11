@@ -1,0 +1,7 @@
+version: "3.9"
+services:
+  rest:
+    build: .
+    command: npm run start
+    ports:
+      - "8080:8080"
